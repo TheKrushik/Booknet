@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/graph_main"
+    app:startDestination="@id/nav_splash">
+
+    <fragment
+        android:id="@+id/nav_splash"
+        android:name="com.example.booknet.presentation.fragment.splash.SplashFragment"
+        android:label="SplashFragment"
+        tools:layout="@layout/fragment_splash">
+
+        <action
+            android:id="@+id/action_to_signInFragment"
+            app:destination="@id/nav_auth"
+            app:popUpTo="@id/nav_splash"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_nav_splash_to_nav_list_book"
+            app:destination="@id/nav_list_book"
+            app:popUpTo="@id/nav_splash"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <action
+        android:id="@+id/action_global_nav_auth"
+        app:destination="@id/nav_auth" />
+    <fragment
+        android:id="@+id/nav_auth"
+        android:name="com.example.booknet.presentation.fragment.auth.AuthFragment"
+        android:label="@string/menu_auth"
+        tools:layout="@layout/fragment_auth">
+        <argument
+            android:name="isLogin"
+            app:argType="boolean"
+            android:defaultValue="false" />
+        <action
+            android:id="@+id/action_to_nav_list_book"
+            app:destination="@id/nav_list_book"
+            app:popUpTo="@id/nav_auth"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_list_book"
+        android:name="com.example.booknet.presentation.fragment.list.ListBookFragment"
+        android:label="@string/menu_list_book"
+        tools:layout="@layout/fragment_list_book" >
+        <action
+            android:id="@+id/action_to_nav_reader"
+            app:destination="@id/nav_reader" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_reader"
+        android:name="com.example.booknet.presentation.fragment.reader.ReaderFragment"
+        android:label="@string/menu_reader"
+        tools:layout="@layout/fragment_reader" >
+        <argument
+            android:name="argBook"
+            app:argType="com.example.booknet.domain.model.Book" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_library"
+        android:name="com.example.booknet.presentation.fragment.library.LibraryFragment"
+        android:label="@string/menu_library"
+        tools:layout="@layout/fragment_library" />
+
+    <fragment
+        android:id="@+id/nav_contest"
+        android:name="com.example.booknet.presentation.fragment.contest.ContestFragment"
+        android:label="@string/menu_contest"
+        tools:layout="@layout/fragment_contest" />
+
+    <fragment
+        android:id="@+id/nav_notifications"
+        android:name="com.example.booknet.presentation.fragment.notifications.NotificationsFragment"
+        android:label="@string/menu_notifications"
+        tools:layout="@layout/fragment_notifications" />
+
+    <fragment
+        android:id="@+id/nav_settings"
+        android:name="com.example.booknet.presentation.fragment.settings.SettingsFragment"
+        android:label="@string/menu_settings"
+        tools:layout="@layout/fragment_settings" />
+
+    <action
+        android:id="@+id/action_global_noInternetFragment"
+        app:destination="@id/noInternetFragment"
+        app:launchSingleTop="true" />
+    <fragment
+        android:id="@+id/noInternetFragment"
+        android:name="com.example.booknet.presentation.fragment.inet.NoInternetFragment"
+        android:label="NoInternetFragment"
+        tools:layout="@layout/fragment_no_internet" />
+
+
+</navigation>

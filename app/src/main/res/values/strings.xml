@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Booknet</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+
+    <!--Menu-->
+    <string name="menu_auth">Auth</string>
+    <string name="menu_library">Библиотека</string>
+    <string name="menu_list_book">Книги</string>
+    <string name="menu_reader">Reader</string>
+    <string name="menu_notifications">Уведомления</string>
+    <string name="menu_contest">Конкурс</string>
+    <string name="menu_settings">Настройки</string>
+    <string name="menu_exit">Выход</string>
+
+    <!--Auth-->
+    <string name="btn_enter">Sign In</string>
+
+    <!--Inet-->
+    <string name="error_inet_title">Что-то пошло не так…</string>
+    <string name="btn_inet_refresh">Повторить подключение</string>
+
+    <!--List Book-->
+    <string name="tab_lib_read">Читаю</string>
+    <string name="tab_lib_archive">Архив</string>
+    <string name="tab_lib_favorites">Избранное</string>
+
+</resources>
